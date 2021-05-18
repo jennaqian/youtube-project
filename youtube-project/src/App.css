@@ -1,0 +1,26 @@
+.App {
+text-align: center;
+  height: 600px;
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+
+img {
+  height:60px;
+  width: 60px;
+  border-radius: 20%;
+}
+.Navbar {
+  border: 4px solid black ;
+  height: 100px;
+  background-color: rgb(40, 199, 186);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Link {
+  text-decoration: none;
+}
+.Link:hover {
+  color: white;
+  text-transform: uppercase;
+}
