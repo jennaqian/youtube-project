@@ -22,6 +22,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Youtube} />
         <Route path="/about" component={About} />
+        <p>Hi Jenna </p>
       </Switch>
     </div>
   );
