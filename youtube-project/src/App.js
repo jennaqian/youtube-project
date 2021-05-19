@@ -8,6 +8,7 @@ import About from './Components/About'
 //Yesenia was here 
 //this was done with new branch
 
+//Jenna was here 
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" component={Youtube} />
         <Route path="/about" component={About} />
         <p>Hi Jenna </p>
+        <p>Hi Yesi</p>
       </Switch>
     </div>
   );
