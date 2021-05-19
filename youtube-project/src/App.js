@@ -26,6 +26,7 @@ function App() {
         <Route path="/about" component={About} />
         <p>Hi Jenna </p>
         <p>Hi Yesi</p>
+        <p>This better work</p>
       </Switch>
     </div>
   );
