@@ -1,15 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react'
 import {Link, Route, Switch } from 'react-router-dom';
 import Youtube from './Components/Youtube';
-import About from './Components/About'
-
-//Yesenia was here 
-//this was done with new branch
-
-//Jenna was here 
-
+import About from './Components/About';
 
 function App() {
   return (
@@ -24,11 +17,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={Youtube} />
         <Route path="/about" component={About} />
-        <p>Hi Jenna </p>
-        <p>Hi Yesi</p>
-        <p>This better work</p>
-        <p>Main branch?</p>
-        <p>Can I add from Main?</p>
       </Switch>
     </div>
   );
