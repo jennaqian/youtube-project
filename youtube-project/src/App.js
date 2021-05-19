@@ -6,7 +6,7 @@ import Youtube from './Components/Youtube';
 import About from './Components/About'
 
 //Yesenia was here 
-
+//this was done with new branch
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Youtube} />
         <Route path="/about" component={About} />
+        <p>Hi Jenna </p>
       </Switch>
     </div>
   );
