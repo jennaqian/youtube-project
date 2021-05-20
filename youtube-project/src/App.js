@@ -1,8 +1,10 @@
 import './App.css';
 import React from 'react'
 import {Link, Route, Switch } from 'react-router-dom';
+
 import Youtube from './Components/Youtube';
 import About from './Components/About';
+import Video from "./Components/Video"
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
       </nav>
 
       <Switch>
-        <Route exact path="/" component={Youtube} />
+        <Route path="/video" component={Video}/>
         <Route path="/about" component={About} />
+        <Route exact path="/" component={Youtube} />
       </Switch>
     </div>
   );
