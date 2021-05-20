@@ -19,10 +19,13 @@ export default class Youtube extends Component {
   }
 
   getVideos = async () => {
+    // https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=dog&key=AIzaSyBIMoGD2So7V07NuaeUb56WM_HAdwCaBxQ
     console.log(process.env.REACT_APP_keyAPI);
+    // const URL = https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=dog&key=
     const { data } = await axios.get(
-      `https://youtube.googleapis.com/youtube/v3/search?videoId&key=${process.env.REACT_APP_keyAPI}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=dog&key=${process.env.REACT_APP_keyAPI}`
     );
+    
     this.setState({
       videos: data.items,
     });
@@ -64,8 +67,8 @@ export default class Youtube extends Component {
             id="input"
             value={this.state.input}
           />
-          <button onClick={this.getVideos}>Search</button>
-          {/* <input type="submit"   /> */}
+          {/* <button onClick={this.getVideos}>Search</button> */}
+          <input type="submit"/>
         </form>
         <main>
           {this.state.show &&
