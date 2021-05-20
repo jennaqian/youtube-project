@@ -24,7 +24,7 @@ export default class Youtube extends Component {
       `https://youtube.googleapis.com/youtube/v3/search?videoId&key=${process.env.REACT_APP_keyAPI}`
     );
     this.setState({
-      videos: data.items,
+      videos: data.items[0]
     });
     console.log(this.state.videos);
   };

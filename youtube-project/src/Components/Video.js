@@ -30,7 +30,7 @@ export class Video extends Component {
     event.preventDefault();
     console.log("You submitted");
     this.setState({
-      inputs: this.state.inputs.concat(this.state.input),
+   inputs:    this.state.inputs.concat(this.state.input),
       comments: this.state.comments.concat(this.state.comment),
     });
   };
