@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <nav className="Navbar">
         <Link to="/" className="Link">
-          <img src="https://www.kindpng.com/picc/m/109-1096605_transparent-youtube-play-button-clipart-cool-youtube-logo.png" alt="Youtube Logo" />
+          <img className="YoutubeLogo" src="https://www.kindpng.com/picc/m/109-1096605_transparent-youtube-play-button-clipart-cool-youtube-logo.png" alt="Youtube Logo" />
         </Link>
         <Link to="/about" className="Link">About</Link>
       </nav>
