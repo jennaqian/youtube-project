@@ -21,7 +21,8 @@ export default function About() {
 
                 <div className="Yesi">
                     <h1>Yesenia Lopez</h1>
-                    <p>I am Software Developer that has built applications using React, Vanilla Javascript  </p>
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEEFkYspUWizw/profile-displayphoto-shrink_800_800/0/1522974214294?e=1621468800&v=beta&t=RboItWRsaHnfUZ9nxKkE0u6Fn7FpA8EighTnI_eMiho" alt="Yesi" style={{height:"150px"}}/>
+                    <p>I am Mexican-American, born and raised in Brooklyn, NY. As a first generation American, it was difficult to understand the possibilities and career options out there. I went to college, got my degree and then was stuck in what to do next. No one in my network had careers in tech and so I never would have thought I would be here, learning how to code to become a Software Engineer. I am so grateful to be part of the tech community to pave a way to more diverse communities. I aspire to innovate and lead a new generation of tech by learning and challenging myself everyday. My main passion right now is UI/UX design and can't wait to put companies visions into reality. </p>
                     <a href="https://github.com/ylopez25"><img className="GithubLogo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github Logo"/></a>
                 </div>
             </div>
