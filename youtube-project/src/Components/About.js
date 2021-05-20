@@ -11,6 +11,7 @@ export default function About() {
             <div className="AboutMe">
                 <div className="Jenna">
                     <h1>Jenna Qian</h1>
+                    <img src="https://i.imgur.com/1zjVOT7.jpg" alt="Jenna" style={{height:"150px"}}/>
                     <div>
                         <p>Born in China, raised and living in New York City.</p>
                         <p>Growing up, I've always been fasinated by tech gadgets, but the lack of exposure and the idea of IT being traditionally male dominated, it led me to believing that route was not for me. Fast forward to now, technology is a necessity in the 21st century, from navigation to finding the next 5-star Yelp meal. This sparked my interest and motivated me to have a career change. I am currently pursuing a 12-month, Google-funded software engineering fellowship in hopes of creating interactive websites and apps to improve my community. By learning and understanding tech myself, I can better explain and teach it to those around me as well.</p>

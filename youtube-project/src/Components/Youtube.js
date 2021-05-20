@@ -44,7 +44,7 @@ export default class Youtube extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" onChange={this.handleChange} className="Input" placeholder="Search here..."/>
-                    <button className="Button">Search</button>
+                    <input type="submit" ></input>
                 </form>
 
                 <ul>
