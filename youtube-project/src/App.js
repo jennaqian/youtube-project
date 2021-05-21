@@ -17,9 +17,9 @@ function App() {
       </nav>
 
       <Switch>
-        <Route path="/video" component={Video}/>
-        <Route path="/about" component={About} />
         <Route exact path="/" component={Youtube} />
+        <Route path="/about" component={About} />
+        <Route path="/videos/:id" component={Video}/>
       </Switch>
     </div>
   );
