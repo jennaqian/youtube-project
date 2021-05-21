@@ -48,6 +48,8 @@ export class Video extends Component {
     let inputsList = inputs.map((e) => <li>{e}</li>);
     let commentsList = comments.map((e) => <li>{e}</li>);
 
+    // const {} = this.props
+
     const opts = {
       height: '390',
       width: '640',
@@ -100,8 +102,6 @@ export class Video extends Component {
               Name: {inputsList}
               Comment: {commentsList}
 
-              Name: {this.state.input}
-              Comment: {this.state.comment}
             </ul>
           </div>
         </div>
