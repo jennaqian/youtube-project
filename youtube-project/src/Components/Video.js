@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import { Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import Youtube from "react-youtube";
+// import { Route } from 'react-router-dom';
 // import ReactPlayer from "react-player/youtube";
-import Youtube from 'react-youtube'
 
 export class Video extends Component {
   constructor() {
@@ -11,14 +11,9 @@ export class Video extends Component {
     this.state = {
       input: "",
       comment: "",
-      // inputAndComment: [],
-      inputs: [],
-      comments: [],
+      inputAndComment: [],
     };
   }
-
-
-  
 
   handleInput = (e) => {
     this.setState({
@@ -36,33 +31,33 @@ export class Video extends Component {
     event.preventDefault();
     console.log("You submitted");
     this.setState({
-      // inputAndComment: this.state.input.concat(this.state.comment)
-      inputs: this.state.inputs.concat(this.state.input),
-      comments: this.state.comments.concat(this.state.comment),
+      inputAndComment: this.state.inputAndComment.concat([
+        this.state.input + ":", this.state.comment, <br></br>,
+      ]),
     });
     event.target.reset();
   };
 
   render() {
-    const { inputs, comments } = this.state;
-    let inputsList = inputs.map((e) => <li>{e}</li>);
-    let commentsList = comments.map((e) => <li>{e}</li>);
-
-    // const {} = this.props
+    const { inputAndComment } = this.state;
+    let inputAndCommentList = inputAndComment.map((e) => <li>{e}</li>);
 
     const opts = {
-      height: '390',
-      width: '640',
+      height: "390",
+      width: "640",
       playerVars: {
         autoplay: 1,
       },
     };
     return (
-     
       <div>
         <div>
           <br />
-      <Youtube videoId={`https://www.youtube.com/watch?v=${this.props.match.params.id}`} opts={opts} onReady={this._onReady} />
+          <Youtube
+            videoId={this.props.match.params.id}
+            opts={opts}
+            onReady={this._onReady}
+          />
           <Link to="/">
             <button>Search</button>
           </Link>
@@ -71,8 +66,8 @@ export class Video extends Component {
         <hr></hr>
 
         <div className="CommentSection">
-          <div>
-            <h3>Comment Form</h3>
+          <div className="CommentForm">
+            <h3>Comment Form:</h3>
             <form onSubmit={this.handleSubmit}>
               <label>Name:</label>
               <br></br>
@@ -92,16 +87,14 @@ export class Video extends Component {
                 placeholder="Type your comment here..."
               ></textarea>
               <br></br>
-              <input type="submit"></input>
+              <input type="submit" className="SubmitButton"></input>
             </form>
           </div>
 
           <div>
             <ul className="UList">
               <h3>Comments:</h3>
-              Name: {inputsList}
-              Comment: {commentsList}
-
+              {inputAndCommentList}
             </ul>
           </div>
         </div>
@@ -115,3 +108,8 @@ export class Video extends Component {
 }
 
 export default Video;
+
+// inputs: this.state.inputs.concat(this.state.input),
+// comments: this.state.comments.concat(this.state.comment),
+// let inputsList = inputs.map((e) => <li>{e}</li>);
+// let commentsList = comments.map((e) => <li>{e}</li>);

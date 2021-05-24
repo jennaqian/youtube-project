@@ -71,26 +71,36 @@ html,body {
 }
 
 .CommenterName {
-  text-align: center;
-  width: 200px;
-  margin: 10px;
-  padding: 5px;
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
   text-decoration: none;
   outline: none;
 }
 .CommentArea {
-  text-align: center;
-  margin: 10px;
-  width: 300px;
-  height: 100px;
-  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
   outline: none;
 }
 .UList {
   list-style-type: none;
+  text-align: left;
+  margin: 10px;
 
 }
 .CommentSection {
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  margin: 10px;
+}
+.CommentForm {
+  text-align: left;
+}
+.SubmitButton {
+  width: 200px;
+  padding: 10px;
 }
