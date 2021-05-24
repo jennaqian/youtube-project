@@ -5,9 +5,7 @@ export default function About() {
         <div>
             <div className="ProjectDes">
                 <h1>PROJECT DESCRIPTION</h1>
-               
-                <p>This Youtube clone is built with love and React. It is a group project that allowed us to strengthen our communication and problem-solving skills. Youtube is a worldwide application that is filled with large amounts of data. We were able to learn how to grab specific information in the API call and hide the API key using .env. This is immportant to ensure company's information security. We used React to create this clone which is a Javascript Library used worldwide by a community of developers. One of our biggest challenges we faced were calling the Youtube video links to our website but with research and persistance we succeeded in attaining that information. We are proud to say this application has taught us alot of what it's like to pair program in the tech workforce.</p>
-           
+                <p>This Youtube clone is built with love and React. It is a group project that allowed us to strengthen our communication and problem-solving skills. Youtube is a worldwide application that is filled with large amounts of data. We were able to learn how to grab specific information in the API call and hide the API key using .env. This is immportant to ensure company's information security. We used React to create this clone which is a Javascript Library used worldwide by a community of developers. One of our biggest challenges we faced were calling the Youtube video links to our website but with research and persistance we succeeded in attaining that information. We are proud to say this application has taught us alot of what it's like to pair program in the tech workforce.</p> 
             </div>
             
             <div className="AboutMe">
@@ -23,7 +21,6 @@ export default function About() {
 
                 <div className="Yesi">
                     <h1>Yesenia Lopez</h1>
-
                     <img src="https://lh3.googleusercontent.com/-hPNdX2ZH4SMxbSvKFT3-puBB3eFYdJFkpKUDcMXvzrsgkZg94i23b-mwSAv8InCOT3VpaDz1Ui6sNm8Ja7YbA4wtUCG0lqkDcayPth4zML9KeMRpyeXAYlwHMkZ3AmEukM8JQve=w2400" alt="Yesi" style={{height:"180px", width: '150px'}}/>
                     <p>I am Mexican-American, born and raised in Brooklyn, NY.</p>
                         <p> As a first generation American, it was difficult to understand the possibilities and career options out there. I went to college, got my degree and then was stuck in what to do next. No one in my network had careers in tech and so I never would have thought I would be here, learning how to code to become a Software Engineer. I am so grateful to be part of the tech community to pave a way to more diverse communities. I aspire to innovate and lead a new generation of tech by learning and challenging myself everyday. My main passion right now is UI/UX design and can't wait to put companies visions into reality. </p>

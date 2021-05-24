@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Youtube from "react-youtube";
-// import { Route } from 'react-router-dom';
-// import ReactPlayer from "react-player/youtube";
 
 export class Video extends Component {
   constructor() {
@@ -108,8 +106,3 @@ export class Video extends Component {
 }
 
 export default Video;
-
-// inputs: this.state.inputs.concat(this.state.input),
-// comments: this.state.comments.concat(this.state.comment),
-// let inputsList = inputs.map((e) => <li>{e}</li>);
-// let commentsList = comments.map((e) => <li>{e}</li>);
