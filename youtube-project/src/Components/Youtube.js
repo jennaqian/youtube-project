@@ -1,7 +1,6 @@
 import { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import Video from './Components/Video'
 
 export default class Youtube extends Component {
   constructor() {
@@ -40,33 +39,36 @@ export default class Youtube extends Component {
       const videoList = videos.map((video) => {
         return (
           <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-            <li className="list-item">
-              <img
-                src={video.snippet.thumbnails.default.url}
-                style={{ height: "100px", width: "150px" }}
-                alt={video.snippet.description}
-              />
-              <h3>{video.snippet.title}</h3>
-            </li>
+              <ul className="Results">
+                <li>
+                  <h3>{video.snippet.title}</h3>
+                  <img
+                    src={video.snippet.thumbnails.default.url}
+                    style={{ height: "100px", width: "150px" }}
+                    alt={video.snippet.description}
+                  />
+                </li>
+              </ul>
           </Link>
         );
       });
   
       return (
-        <div>
-          <form className="search" onSubmit={this.handleSubmit}>
+        <div className="HomePage">
+          <form onSubmit={this.handleSubmit}>
             <h1>Search Youtube Video</h1>
             <input
               onChange={this.handleChange}
               value={input}
               type="text"
-              placeholder="search..."
-              className="search"
+              placeholder="Search here..."
+              className="SearchInput"
             />
-            <button>Search</button>
+            <button className="SearchButton">Search</button>
           </form>
           <section>
-            <ul>{videoList}</ul>
+            {/* { this.handleChange ? videoList: 'no videos'} */}
+              {videoList}
           </section>
         </div>
       );
