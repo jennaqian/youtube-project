@@ -30,7 +30,9 @@ export class Video extends Component {
     console.log("You submitted");
     this.setState({
       inputAndComment: this.state.inputAndComment.concat([
-        this.state.input + ":", this.state.comment, <br></br>,
+        this.state.input + ":",
+        this.state.comment,
+        <br></br>,
       ]),
     });
     event.target.reset();
