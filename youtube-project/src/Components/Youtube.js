@@ -27,6 +27,7 @@ export default class Youtube extends Component {
           input: "",
         });
       } catch {
+        // ('No Videos')
         console.log("error");
       }
     };
@@ -40,6 +41,7 @@ export default class Youtube extends Component {
       const videoList = videos.map((video) => {
         return (
           <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+            
             <li className="list-item">
               <img
                 src={video.snippet.thumbnails.default.url}
@@ -66,7 +68,10 @@ export default class Youtube extends Component {
             <button>Search</button>
           </form>
           <section>
-            <ul>{videoList}</ul>
+           {/* <ul> */}
+
+             { this.handleSubmit ? videoList : 'No videos'}
+             {/* </ul>   */}
           </section>
         </div>
       );
