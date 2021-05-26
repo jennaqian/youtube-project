@@ -56,8 +56,9 @@ export class Video extends Component {
             opts={opts}
             onReady={this._onReady}
           />
+          <br></br>
           <Link to="/">
-            <button>Search</button>
+            <button className="SearchButton">Search</button>
           </Link>
         </div>
 
@@ -65,7 +66,7 @@ export class Video extends Component {
 
         <div className="CommentSection">
           <div className="CommentForm">
-            <h3>Comment Form:</h3>
+            <h2>Comment Form:</h2>
             <form onSubmit={this.handleSubmit}>
               <label>Name:</label>
               <br></br>
@@ -91,7 +92,7 @@ export class Video extends Component {
 
           <div>
             <ul className="UList">
-              <h3>Comments:</h3>
+              <h2>Comments:</h2>
               {inputAndCommentList}
             </ul>
           </div>
@@ -106,5 +107,3 @@ export class Video extends Component {
 }
 
 export default Video;
-
-
