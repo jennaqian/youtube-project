@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Youtube from "react-youtube";
+import {uuid} from "uuidv4";
 
 export class Video extends Component {
   constructor() {
@@ -29,18 +30,39 @@ export class Video extends Component {
     event.preventDefault();
     console.log("You submitted");
     this.setState({
+      input: "",
+      comment: "",
       inputAndComment: this.state.inputAndComment.concat([
-        this.state.input + ":",
-        this.state.comment,
-        <br></br>,
+        {
+          name: this.state.input,
+          comment: this.state.comment,
+          id : uuid(),
+        },
       ]),
     });
-    event.target.reset();
+  };
+
+  handleDelete = (obj) => {
+    console.log(obj);
+
+    let filterObj = this.state.inputAndComment.filter(
+      (item) => item.id !== obj
+    );
+    console.log(filterObj);
+    this.setState({
+      inputAndComment: filterObj,
+    });
   };
 
   render() {
     const { inputAndComment } = this.state;
-    let inputAndCommentList = inputAndComment.map((e) => <li>{e}</li>);
+    let inputAndCommentList = inputAndComment.map((obj, i) => (
+      <li key={obj.name} index={i} value={i}>
+        Name: {obj.name} <br></br>
+        Comment:{obj.comment}
+        <button onClick={() => this.handleDelete(obj.id)}>Delete</button>
+      </li>
+    ));
 
     const opts = {
       height: "390",
@@ -76,6 +98,7 @@ export class Video extends Component {
                 type="text"
                 className="CommenterName"
                 onChange={this.handleInput}
+                value={this.state.input}
                 placeholder="Enter your name..."
               ></input>
               <br></br>
@@ -85,6 +108,7 @@ export class Video extends Component {
                 type="text"
                 onChange={this.handleText}
                 className="CommentArea"
+                value={this.state.comment}
                 placeholder="Type your comment here..."
               ></textarea>
               <br></br>
