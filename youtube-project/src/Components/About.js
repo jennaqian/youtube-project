@@ -11,7 +11,7 @@ export default function About() {
           skills. Youtube is a worldwide application that is filled with large
           amounts of data. We were able to learn how to grab specific
           information in the API call and hide the API key using .env. This is
-          immportant to ensure company's information security. We used React to
+          important to ensure company's information security. We used React to
           create this clone which is a Javascript Library used worldwide by a
           community of developers. One of our biggest challenges we faced were
           calling the Youtube video links to our website but with research and
