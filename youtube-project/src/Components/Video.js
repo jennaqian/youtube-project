@@ -58,8 +58,9 @@ export class Video extends Component {
     let inputAndCommentList = inputAndComment.map((obj, i) => (
       <li key={obj.name} index={i} value={i}>
         Name: {obj.name} <br></br>
-        Comment:{obj.comment}
-        <button onClick={() => this.handleDelete(obj.id)}>Delete</button>
+        Comment:{obj.comment} {"   "}
+        <button onClick={() => this.handleDelete(obj.id)} className="DeleteButton">Delete</button>
+        <hr></hr>
       </li>
     ));
 
