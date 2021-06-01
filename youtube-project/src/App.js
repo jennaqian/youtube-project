@@ -8,9 +8,11 @@ import Video from "./Components/Video";
 
 function App() {
   return (
+    
     <div className="App">
       <nav className="Navbar">
         <Link to="/" className="Link">
+    {/*Why'd you do x?*/}
           <img
             className="YoutubeLogo"
             src="https://www.kindpng.com/picc/m/109-1096605_transparent-youtube-play-button-clipart-cool-youtube-logo.png"
