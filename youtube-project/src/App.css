@@ -1,3 +1,9 @@
+/*
+Some of the component-specific styles should be moved to their own css files.
+For instance, the .Yesi {...} block should live in a css file for the About component.
+This makes your styles easier to maintain as the project grows larger.
+*/
+
 .App {
   text-align: center;
   height: auto;
@@ -35,6 +41,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+/* 
+Combine .Jenna and .Yesi into a single class! Maybe .Bio ? 
+This is a violation of DRY since each declaration block is the same.
+*/
 .Jenna {
   font-family: fantasy;
   padding-left: 20px;

@@ -8,13 +8,15 @@ export default class Youtube extends Component {
     this.state = {
       input: "",
       videos: [],
-      showVid: false,
+      // I don't think showVid is necessary. Could you use this.state.videos.length to determine whether to display videos?
+      // An important part of thinking in react is only creating new state variables when you absolutely need them!
+      showVid: false, 
     };
   }
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const key = process.env.REACT_APP_keyAPI;
+    const key = process.env.REACT_APP_keyAPI; // Follow conventions: you should name your env vars with ALL_CAPS
     const search = this.state.input;
 
     try {
@@ -33,6 +35,8 @@ export default class Youtube extends Component {
   };
 
   handleChange = (e) => {
+    // This makes the 'no videos to show' message dissappear the moment I start typing
+    // into the input. Is that your desired behavior?
     this.setState({ input: e.target.value,  showVid: true });
   };
 
@@ -41,6 +45,12 @@ export default class Youtube extends Component {
     const videoList = videos.map((video) => {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+          {/* 
+            Each thumbnail will be inside a different ul component.
+            I'd recommend returning something like <li key={}><Link>...</Link></li>
+            and then replacing your <section> tag with a <ul> in the return statement for render.
+            That way, each list item is part of the same ul!
+          */}
           <ul className="Results">
             <li>
               <h3>{video.snippet.title}</h3>

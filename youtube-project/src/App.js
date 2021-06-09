@@ -8,6 +8,7 @@ import Video from "./Components/Video";
 
 function App() {
   return (
+    
     <div className="App">
       <nav className="Navbar">
         <Link to="/" className="Link">
