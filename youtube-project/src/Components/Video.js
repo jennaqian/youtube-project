@@ -8,12 +8,15 @@ export class Video extends Component {
     super();
 
     this.state = {
-      input: "",
+      input: "", // consider renaming to be more descriptive. Something like 'firstName'
       comment: "",
       inputAndComment: [],
     };
   }
 
+  // handleInput and handleText can be combined into a single method.
+  // instead of { input: e.target.value }, you can use { [e.target.name]: e.target.value }
+  // To make this work, pass the 'name' prop to each of your input tags.
   handleInput = (e) => {
     this.setState({
       input: e.target.value,
@@ -36,7 +39,7 @@ export class Video extends Component {
         {
           name: this.state.input,
           comment: this.state.comment,
-          id : uuid(),
+          id : uuid(), // nice use of uuid!
         },
       ]),
     });
@@ -55,6 +58,9 @@ export class Video extends Component {
 
   render() {
     const { inputAndComment } = this.state;
+    // The key you pass below shouldn't be a username because the same user might make multiple comments!
+    // To keep the key's unique, use obj.id
+    // We know each obj.id is unique since you used the uuid library!
     let inputAndCommentList = inputAndComment.map((obj, i) => (
       <li key={obj.name} index={i} value={i}>
         Name: {obj.name} <br></br>
@@ -63,7 +69,8 @@ export class Video extends Component {
         <hr></hr>
       </li>
     ));
-
+    // This will make the youtube player less responsive - it won't resize on mobile.
+    // Use a css class to apply responsive styling rather than applying inline styles with opts.
     const opts = {
       height: "390",
       width: "640",
@@ -74,6 +81,7 @@ export class Video extends Component {
     return (
       <div>
         <div>
+      {/* Please don't use br tags! Use css to space things the way you want them! */}
           <br />
           <Youtube
             videoId={this.props.match.params.id}
@@ -92,6 +100,7 @@ export class Video extends Component {
           <div className="CommentForm">
             <h2>Comment Form:</h2>
             <form onSubmit={this.handleSubmit}>
+              {/* labels should be given an htmlFor prop */}
               <label>Name:</label>
               <br></br>
               <input
